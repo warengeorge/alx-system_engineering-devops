@@ -4,6 +4,7 @@
 # 	Usage: fetch_subdomains domain subdomains
 # 	Example 1: fetch_subdomains google.com mail
 # 	Example 2: fetch_subdomains google.com 'www images maps mail'
+# shellcheck disable=SC2086
 fetch_subdomains() {
 	domain="$1"
 	subdomains=()
