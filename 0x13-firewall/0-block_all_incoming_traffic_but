@@ -1,0 +1,3 @@
+sudo ufw allow ssh
+sudo ufw allow 443/tcp comment 'accept HTTPS connections'
+sudo ufw allow 80/tcp comment 'accept Apache'
