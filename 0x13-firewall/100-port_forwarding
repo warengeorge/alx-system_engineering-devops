@@ -7,10 +7,12 @@
 #   ufw-before-output
 #   ufw-before-forward
 #
+
+# Redirect requests from port 8080/tcp to 80/tcp
 *nat
 :PREROUTING ACCEPT [0:0]
-# forward 8080/TCP to 80/TCP
--A PREROUTING -t nat -i eth0 -p tcp --dport 8080 -j REDIRECT --to-port 80
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT
 
 # Don't delete these required lines, otherwise there will be errors
 *filter
