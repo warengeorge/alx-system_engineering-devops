@@ -12,8 +12,8 @@ server {
     add_header  X-Served-By 74437-web-01;
 
     # Serve /airbnb-onepage/ route from AirBnB_clone_v2
-    location = /airbnb-onepage/ {
-        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    location /airbnb-onepage/ {
+        proxy_pass http://localhost:5000;;
     }
 
     # 404 error page
